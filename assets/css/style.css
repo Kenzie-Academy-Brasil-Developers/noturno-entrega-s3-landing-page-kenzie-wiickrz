@@ -29,7 +29,14 @@ family=Lato -> Títulos, textos
 /* FONTS */
 
 /* VARIÁVEIS */
-:root{}
+:root{
+    --branco-p: #FFFFFF;
+    --branco-s: #f6f6f6;
+    --azul-c: #007aff;
+    --azul-e: #00043e;
+    --cinza-c: #818181;
+    --cinza-e: #303030;
+}
   
 /* GERAL */
 html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
@@ -97,7 +104,7 @@ main{}
   
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
+    @media screen and (min-width: 480px) {}
   
-    @media screen and (min-width: 800px) {}
+    @media screen and (min-width: 768px) {}
 /* MEDIA QUERIES */
