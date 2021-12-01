@@ -43,11 +43,11 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Lato;
     list-style: none;
 }
 img{
-    max-width: 800px;
+    max-width: 100px;
 }
 div.flex{
     display: flex;
@@ -66,6 +66,10 @@ div.container{
     width: 100%;
     max-width: 1140px;
     margin:0 auto;
+}
+
+h2 {
+    font-family: Montserrat;
 }
 /* GERAL */
   
@@ -90,7 +94,6 @@ main{}
 /* INICIAL */
 
 /* EXTRAS */
-
 /* para estilizar a scrollbar */
 ::-webkit-scrollbar{}
 ::-webkit-scrollbar-button{}
@@ -101,10 +104,126 @@ main{}
 ::-webkit-resizer{}
 
 /* EXTRAS */
-  
+
+/* DESTAQUE */
+
+.secaoDestaque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--azul-e);
+    padding-bottom: 150px;
+    color: var(--branco-p);
+
+}
+
+.secaoDestaque h2 {
+    padding: 10px 30px 0;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.secaoDestaque p {
+    font-size: 20px;
+    font-family: lato;
+    font-weight: 400;
+    margin: 25px;
+}
+
+/* FORM DESTAQUE */
+
+.secaoDestaqueFormulario {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+}
+.secaoDestaqueFormulario input {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    width: 55vw;
+}
+
+.secaoDestaqueFormulario button {
+    font-family: lato;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: var(--azul-c);
+    color: var(--branco-p);
+    margin-left: -5px;
+}
+
+::placeholder{
+    padding: 5px;
+    font-family: lato;
+    font-size: 14px;
+    color: var(--cinza-c);
+}
+
+/* DESTAQUE */
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 480px) {}
-  
-    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 480px) {
+
+        /* DESTAQUE */
+
+.secaoDestaque {
+    display: flex;
+    align-items: center;
+    height: 400px;
+}    
+    
+.secaoDestaque h2 {
+    padding-top: 70px;
+    font-size: 46px;
+}
+
+.secaoDestaque p {
+    font-size: 21px;
+}
+
+/* DESTAQUE FORM */
+
+.secaoDestaqueFormulario {
+    flex: 0;
+}
+.secaoDestaqueFormulario input{
+    width: 40vw;
+}
+
+    }
+    @media screen and (min-width: 768px) {
 /* MEDIA QUERIES */
+
+
+    /* DESTAQUE */
+
+    .secaoDestaque {
+        background-image: url(../img/background-destaque.webp);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+    
+    .secaoDestaque h2 {
+        font-size: 63px;
+    }
+    
+    .secaoDestaque p {
+        font-size: 21px;
+    }
+    
+    /* DESTAQUE FORM */
+
+    .secaoDestaqueFormulario {
+        flex: 0;
+    }
+    .secaoDestaqueFormulario input{
+        width: 25vw;
+    }
+}
