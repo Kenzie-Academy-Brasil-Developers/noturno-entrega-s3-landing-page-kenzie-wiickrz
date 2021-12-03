@@ -76,7 +76,6 @@ html{}
   
 /* BODY */
 body{
-    background-color: var(--azul-e);
     color: var(--branco-p);
 }
 /* BODY */
@@ -87,13 +86,14 @@ header .topo{
     /* background-color: green; */
    display: flex;
    justify-content: center;
-    
+   
 }
 #center{
     /* background-color: violet; */
     display: flex;
     justify-content: center;
-    padding-left: 10px;
+    padding: 5px;
+    background-color: var(--azul-e);
 }
 .large-container{
     display: flex;
@@ -140,6 +140,63 @@ footer{}
 
 /* INICIAL */
 main{}
+
+    /* ------COURSES-------- */
+ .secaoCursos #container-titulo{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-flow: column;
+     color: var(--cinza-e);
+     margin: 10px 0px;
+
+ }
+ #container-titulo p{
+     margin: 20px 0px;
+
+ }
+ 
+ #container-cursos{
+     color: var(--cinza-c);
+        
+    }
+
+.curso-icon img{
+    width: 100px;
+    height: auto;
+        
+}
+#cursos-lista{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+ 
+}
+.curso-icon{
+    margin: 5px 15px;
+    padding: 0px 5px;
+    width: 27%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.curso-icon p {
+margin: 20px;
+text-align: center;
+}
+.curso-icon h3{
+    margin-top:10px;
+}
+
+
+#django{
+    width: 80px;
+}
+
+
+
 /* INICIAL */
 
 /* EXTRAS */
@@ -158,6 +215,9 @@ main{}
 
 /* MEDIA QUERIES */
     @media screen and (max-width: 480px) {
+        body{
+            margin: 0px;
+        }
         /* --------HEADER---------- */      
         #menu-header{
             display: flex;
@@ -172,7 +232,21 @@ main{}
       .menu-li a{
          opacity: 0%; 
             }
-    }
+    
+  /* -------CURSOS------ */
+  #container-cursos{
+      
+  }
+  #cursos-lista{
+      flex-flow: column nowrap;
+      align-items: center;
+  }
+  .curso-icon{
+      text-align: center;
+      width: 290px; 
+      padding: 0px;
+  }
   
+}
     @media screen and (min-width: 768px) {}
 /* MEDIA QUERIES */
