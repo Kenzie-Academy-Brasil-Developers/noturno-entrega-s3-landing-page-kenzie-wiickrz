@@ -71,6 +71,8 @@ div.container{
 h2 {
     font-family: Montserrat;
 }
+
+
 /* GERAL */
   
 /* HTML */
@@ -86,7 +88,19 @@ header{}
 /* HEADER */
   
 /* FOOTER */
-footer{}
+footer{
+    background-color: var(--branco-s);
+    text-align: center;  
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a, footer p {
+    color: var(--cinza-e);
+    font-size: 18px;
+}
 /* FOOTER */
 
 /* INICIAL */
@@ -160,16 +174,106 @@ main{}
 ::placeholder{
     padding: 5px;
     font-family: lato;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--cinza-c);
 }
 
 /* DESTAQUE */
 
+.secaoSobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+
+/* EXTRA */
+
+.secaoContato {
+    background-color: var(--branco-s);
+    font-size: 18px;
+    color: var(--cinza-c);
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secaoContato a {
+    text-decoration: none;
+    color: var(--cinza-c);
+}
+
+.secaoContato .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.secaoContato .flex h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--cinza-e);
+    text-transform: uppercase;
+    margin: 20px 0 35px;
+}
+
+.secaoContato form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.secaoContato input:not([type="submit"]), .secaoContato textarea {
+    width: 65vw;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, .1);
+    margin: 10px 0;
+}
+
+.secaoContato textarea {
+    height: 120px;
+}
+
+.secaoContato form label {
+    display: none;
+}
+
+.secaoContato-informacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 65vw;
+}
+
+.secaoContato input[type="submit"] {
+    background-color: var(--branco-p);
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, .1);
+    margin-top: 20px;
+    color: var(--cinza-e);
+    font-size: 18px;
+}
+
+.secaoContato li, .secaoContato p {
+    line-height: 40px;
+}
+
+.secaoContato img {
+    width: 18px;
+    opacity: .6;
+}
+
+/* EXTRA */
+
+
 /* MEDIA QUERIES */
     @media screen and (min-width: 480px) {
 
-        /* DESTAQUE */
+    /* DESTAQUE */
 
 .secaoDestaque {
     display: flex;
@@ -186,7 +290,7 @@ main{}
     font-size: 21px;
 }
 
-/* DESTAQUE FORM */
+    /* DESTAQUE FORM */
 
 .secaoDestaqueFormulario {
     flex: 0;
@@ -195,9 +299,12 @@ main{}
     width: 40vw;
 }
 
-    }
-    @media screen and (min-width: 768px) {
-/* MEDIA QUERIES */
+    /* DESTAQUE */
+
+}
+
+@media screen and (min-width: 768px) {
+
 
 
     /* DESTAQUE */
@@ -226,4 +333,37 @@ main{}
     .secaoDestaqueFormulario input{
         width: 25vw;
     }
-}
+
+    .secaoContato .flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80vw;
+        justify-content: space-around ;
+    }
+    
+    .secaoContato-informacoes {
+        width: 20vw;
+    }
+    .secaoContato form{
+        width: 40vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    .secaoContato input:not([type="submit"]) {
+        width: 18vw;
+        margin-left: 20px;
+    }
+    .secaoContato h2 {
+        width: 100%;
+    }
+    
+    .secaoContato textarea {
+    width: calc(36vw + 20px);
+    }
+    
+
+    /* MEDIA QUERIES */
