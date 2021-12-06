@@ -219,12 +219,13 @@ article.flex div:last-child {
 }
 
 @media screen and (min-width: 768px) {
-  article.flex {
-    justify-content: center;
+  article.flex div.flex-col {
+    justify-content: flex-start;
   }
 
-  div.flex-col {
-    justify-content: flex-start;
+  article.flex div.flex-col {
+    max-width: 50%;
+    padding-bottom: 40px;
   }
 
   article.flex div.flex-col span,
@@ -233,18 +234,22 @@ article.flex div:last-child {
     font-size: 19px;
   }
 
-  article.flex div.flex-col h2 {
-    font-size: 24px;
+  article.flex div:nth-child(1) p {
+    padding-left: 300px;
+  }
+
+  article.flex div:nth-child(1) span {
+    padding-left: 300px;
   }
 
   article.flex div.flex-col button {
     width: auto;
-    margin-left: 100px;
+    margin-left: 300px;
   }
 
-  article.flex div.flex-col {
-    max-width: 50%;
-    padding-bottom: 40px;
+  article.flex div.flex-col h2 {
+    font-size: 24px;
+    padding-left: 300px;
   }
 
   [src*="python"] {
@@ -263,13 +268,17 @@ article.flex div:last-child {
 
   article.flex div:last-child h2 {
     padding-left: 0;
-    padding-top: 25px;
+    padding-top: 70px;
   }
 
   article.flex div:last-child {
     background-color: var(--branco-s);
-    justify-content: center;
+    justify-content: flex-start;
     width: 50%;
+  }
+
+  article.flex div.flex-col ul {
+    padding-left: 30px;
   }
 }
 /* MEDIA QUERIES */
