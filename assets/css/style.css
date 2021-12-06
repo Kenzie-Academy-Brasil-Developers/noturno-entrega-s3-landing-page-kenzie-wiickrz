@@ -39,28 +39,16 @@ family=Lato -> Títulos, textos
 
 /* GERAL */
 
-html,
-body,
-figure,
-div,
-input,
-textarea,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "sans-serif";
-  list-style: none;
+html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+    list-style: none;
 }
-img {
-  max-width: 800px;
+img{
+    max-width: 800px;
+    width: 30%;
 }
 div.flex {
   display: flex;
@@ -94,14 +82,64 @@ html {
 /* HTML */
 
 /* BODY */
-body {
+
+body{
+    background-color: var(--azul-e);
+    color: var(--branco-p);
 }
 
 /* BODY */
 
 /* HEADER */
-header {
+
+header .topo{
+    /* background-color: green; */
+   display: flex;
+   justify-content: center;
+    
 }
+#center{
+    /* background-color: violet; */
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+}
+.large-container{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    /* background-color: gold; */
+    align-items: center;
+    
+}
+header #logo{
+width: 50px;
+height: auto;
+margin-left: 5px;
+
+}
+header figcaption{
+    font-size: 0px;
+
+}
+#menu-header{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    /* background-color: yellowgreen; */
+    
+}
+.menu-li{
+    margin: 5px 15px;
+    font-size: 13px;
+
+}
+header a{
+    text-decoration: none;
+    color:var(--branco-s);
+}
+
+
 /* HEADER */
 
 /* FOOTER */
@@ -191,6 +229,26 @@ article.flex div:last-child {
 /* EXTRAS */
 
 /* MEDIA QUERIES */
+
+    @media screen and (max-width: 480px) {
+        /* --------HEADER---------- */      
+        #menu-header{
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-li{
+        background-color: var(--branco-s);
+        height: 2px;
+        width: 20px;
+        margin: 2px;
+            }
+      .menu-li a{
+         opacity: 0%; 
+            }
+    }
+  
+    @media screen and (min-width: 768px) {}
+
 @media screen and (min-width: 480px) {
   article.flex div.flex-col h2 {
     font-size: 36px;
@@ -300,8 +358,9 @@ article.flex div:last-child {
     padding-left: 30px;
   }
 }
+
 /* MEDIA QUERIES */
-=======
+
 
 /* DESTAQUE */
 
