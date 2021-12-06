@@ -38,6 +38,7 @@ family=Lato -> Títulos, textos
 }
 
 /* GERAL */
+
 html,
 body,
 figure,
@@ -79,6 +80,12 @@ div.container {
   max-width: 1140px;
   margin: 0 auto;
 }
+
+h2 {
+    font-family: Montserrat;
+}
+
+
 /* GERAL */
 
 /* HTML */
@@ -98,7 +105,20 @@ header {
 /* HEADER */
 
 /* FOOTER */
-footer {
+
+footer{
+    background-color: var(--branco-s);
+    text-align: center;  
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a, footer p {
+    color: var(--cinza-e);
+    font-size: 18px;
+
 }
 /* FOOTER */
 
@@ -152,7 +172,6 @@ article.flex div:last-child {
 /* INICIAL */
 
 /* EXTRAS */
-
 /* para estilizar a scrollbar */
 ::-webkit-scrollbar {
 }
@@ -282,3 +301,254 @@ article.flex div:last-child {
   }
 }
 /* MEDIA QUERIES */
+=======
+
+/* DESTAQUE */
+
+.secaoDestaque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--azul-e);
+    padding-bottom: 150px;
+    color: var(--branco-p);
+
+}
+
+.secaoDestaque h2 {
+    padding: 10px 30px 0;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.secaoDestaque p {
+    font-size: 20px;
+    font-family: lato;
+    font-weight: 400;
+    margin: 25px;
+}
+
+/* FORM DESTAQUE */
+
+.secaoDestaqueFormulario {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+}
+.secaoDestaqueFormulario input {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    width: 55vw;
+}
+
+.secaoDestaqueFormulario button {
+    font-family: lato;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: var(--azul-c);
+    color: var(--branco-p);
+    margin-left: -5px;
+}
+
+::placeholder{
+    padding: 5px;
+    font-family: lato;
+    font-size: 16px;
+    color: var(--cinza-c);
+}
+
+/* DESTAQUE */
+
+.secaoSobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+
+/* EXTRA */
+
+.secaoContato {
+    background-color: var(--branco-s);
+    font-size: 18px;
+    color: var(--cinza-c);
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secaoContato a {
+    text-decoration: none;
+    color: var(--cinza-c);
+}
+
+.secaoContato .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.secaoContato .flex h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--cinza-e);
+    text-transform: uppercase;
+    margin: 20px 0 35px;
+}
+
+.secaoContato form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.secaoContato input:not([type="submit"]), .secaoContato textarea {
+    width: 65vw;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, .1);
+    margin: 10px 0;
+}
+
+.secaoContato textarea {
+    height: 120px;
+}
+
+.secaoContato form label {
+    display: none;
+}
+
+.secaoContato-informacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 65vw;
+}
+
+.secaoContato input[type="submit"] {
+    background-color: var(--branco-p);
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, .1);
+    margin-top: 20px;
+    color: var(--cinza-e);
+    font-size: 18px;
+}
+
+.secaoContato li, .secaoContato p {
+    line-height: 40px;
+}
+
+.secaoContato img {
+    width: 18px;
+    opacity: .6;
+}
+
+/* EXTRA */
+
+
+/* MEDIA QUERIES */
+    @media screen and (min-width: 480px) {
+
+    /* DESTAQUE */
+
+.secaoDestaque {
+    display: flex;
+    align-items: center;
+    height: 400px;
+}    
+    
+.secaoDestaque h2 {
+    padding-top: 70px;
+    font-size: 46px;
+}
+
+.secaoDestaque p {
+    font-size: 21px;
+}
+
+    /* DESTAQUE FORM */
+
+.secaoDestaqueFormulario {
+    flex: 0;
+}
+.secaoDestaqueFormulario input{
+    width: 40vw;
+}
+
+    /* DESTAQUE */
+
+}
+
+@media screen and (min-width: 768px) {
+
+
+
+    /* DESTAQUE */
+
+    .secaoDestaque {
+        background-image: url(../img/background-destaque.webp);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+    
+    .secaoDestaque h2 {
+        font-size: 63px;
+    }
+    
+    .secaoDestaque p {
+        font-size: 21px;
+    }
+    
+    /* DESTAQUE FORM */
+
+    .secaoDestaqueFormulario {
+        flex: 0;
+    }
+    .secaoDestaqueFormulario input{
+        width: 25vw;
+    }
+
+    .secaoContato .flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80vw;
+        justify-content: space-around ;
+    }
+    
+    .secaoContato-informacoes {
+        width: 20vw;
+    }
+    .secaoContato form{
+        width: 40vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    .secaoContato input:not([type="submit"]) {
+        width: 18vw;
+        margin-left: 20px;
+    }
+    .secaoContato h2 {
+        width: 100%;
+    }
+    
+    .secaoContato textarea {
+    width: calc(36vw + 20px);
+    }
+    
+
+    /* MEDIA QUERIES */
+
