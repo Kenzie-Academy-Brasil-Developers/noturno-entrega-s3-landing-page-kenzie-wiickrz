@@ -98,6 +98,9 @@ body {
   color: var(--branco-p);
 }
 
+button:hover, [type="submit"] {
+    cursor: pointer;
+}
 /* HEADER */
 
 header .topo {
@@ -120,29 +123,37 @@ header .topo {
 }
 
 header #logo {
-  width: 50px;
+  width: 70px;
   height: auto;
   margin-left: 5px;
+  transition: 0.5s;
+}
+
+header #logo:hover {
+ opacity: 0.5;
+ cursor: pointer;
+ transition: 0.5s;
 }
 
 header figcaption {
   font-size: 0px;
 }
 
-#menu-header {
+#menu-header{
   display: flex;
-  flex-flow: row;
-  justify-content: space-around;
+  flex-direction: column;
 }
 
-.menu-li {
-  margin: 5px 15px;
-  font-size: 13px;
+.menu-li{
+  background-color: var(--branco-s);
+  height: 2px;
+  width: 20px;
+  margin: 2px 30px;
+  opacity: 60%;
 }
 
-header a {
-  text-decoration: none;
-  color: var(--branco-s);
+.menu-li a{
+opacity: 0%; 
 }
 
 /* HEADER */
@@ -193,7 +204,7 @@ header a {
   border-radius: 0 5px 5px 0;
   border: none;
   padding: 10px 15px;
-  font-size: 18px;
+  font-size: 14px;
   background-color: var(--azul-c);
   color: var(--branco-p);
   margin-left: -5px;
@@ -202,7 +213,7 @@ header a {
 ::placeholder {
   padding: 10px;
   font-family: lato;
-  font-size: 18px;
+  font-size: 14px;
   color: var(--cinza-c);
 }
 
@@ -238,6 +249,12 @@ header a {
   padding-bottom: 35px;
 }
 
+.secaoSobre button:hover {
+background-color: var(--azul-e);
+color: var(--branco-s);
+transition: 0.5s;
+}
+
 .secaoSobre button {
   width: 70vw;
   border: 1px solid var(--cinza-c);
@@ -248,6 +265,7 @@ header a {
   font-weight: 600;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  transition: 0.5s;
 }
 
 .secaoSobre article.flex div:nth-child(2) {
@@ -266,6 +284,7 @@ header a {
 .secaoSobre article.flex div.flex-col ul {
   list-style: disc;
   max-width: 60vw;
+  padding-bottom: 70px;
 }
 
 .secaoSobre article.flex div:last-child {
@@ -301,10 +320,25 @@ header a {
   width: 250px;
   padding-top: 40px;
   padding-bottom: 40px;
+  transition: 0.5s;
+}
+
+.secaoSobre [src*="python"]:hover {
+  padding-left: 100px;
+  padding-right: 10px;
+  transition: 0.5s;
 }
 
 .secaoSobre [src*="JavaScript-logo"] {
   padding-top: 40px;
+  transition: 0.5s;
+}
+
+
+.secaoSobre [src*="JavaScript-logo"]:hover {
+    padding-left: 10px;
+    padding-right: 100px;
+    transition: 0.5s;
 }
 /* SOBRE */
 
@@ -339,6 +373,7 @@ header a {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  padding-bottom: 70px;
 }
 
 .curso-icon {
@@ -470,3 +505,245 @@ footer p {
   padding-top: 10px;
 }
 /* FOOTER */
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 480px) {
+
+    /* DESTAQUE */
+
+.secaoDestaque {
+  display: flex;
+  align-items: center;
+  height: 400px;
+}
+
+.secaoDestaque h2 {
+  padding-top: 70px;
+  font-size: 46px;
+}
+
+.secaoDestaque p {
+  font-size: 21px;
+}
+
+    /* DESTAQUE FORM */
+
+.secaoDestaqueFormulario {
+  flex: 0;
+}
+.secaoDestaqueFormulario input {
+  width: 40vw;
+}
+
+    /* DESTAQUE */
+
+    /* SOBRE */
+
+.secaoSobre article.flex div.flex-col h2 {
+  font-size: 36px;
+  /* padding: 40px 100px 40px 100px; */
+}
+
+.secaoSobre article.flex div.flex-col button {
+  border-radius: 5px;
+}
+    /* SOBRE */
+}
+    
+
+@media screen and (min-width: 768px) {
+
+    /* HEADER */ 
+
+#menu-header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.menu-li {
+  margin: 5px 25px;
+  font-size: 13px;
+  font-weight: 300;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--branco-s);
+}
+
+header ul li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-li a {
+  opacity: 100%;
+}
+
+    /* HEADER */
+
+    /* DESTAQUE */
+
+.secaoDestaque {
+  background-image: url(../img/background-destaque.webp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.secaoDestaque h2 {
+  font-size: 63px;
+}
+
+.secaoDestaque p {
+  font-size: 21px;
+}
+
+/* DESTAQUE FORM */
+
+.secaoDestaqueFormulario {
+  flex: 0;
+}
+
+.secaoDestaqueFormulario input {
+  width: 30vw;
+}
+    /* DESTAQUE */
+
+    /* SOBRE */
+    .secaoSobre article.flex div.flex-col {
+  /* justify-content: flex-start; */
+}
+
+.secaoSobre article.flex div.flex-col {
+  max-width: 50%;
+  padding-bottom: 40px;
+}
+
+.secaoSobre article.flex div.flex-col span,
+.secaoSobre p,
+.secaoSobre ul li {
+  font-size: 19px;
+}
+
+.secaoSobre article.flex div:nth-child(1) p {
+  padding-left: 200px;
+}
+
+.secaoSobre article.flex div:nth-child(1) span {
+  padding-left: 200px;
+}
+
+.secaoSobre article.flex div.flex-col button {
+  margin-left: 200px;
+  width: 13vw;
+}
+
+.secaoSobre article.flex div.flex-col h2 {
+  font-size: 24px;
+  padding-left: 200px;
+}
+
+.secaoSobre [src*="python"] {
+  width: 550px;
+}
+
+.secaoSobre [src*="JavaScript"] {
+  width: 250px;
+}
+
+.secaoSobre article.flex div:nth-child(3) {
+  width: 50%;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.secaoSobre article.flex div:last-child h2 {
+  padding-left: 0;
+  padding-top: 70px;
+}
+
+.secaoSobre article.flex div:last-child {
+  background-color: var(--branco-s);
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.secaoSobre #secondh2 {
+  padding-top: 100px;
+}
+
+.secaoSobre article.flex div.flex-col ul {
+  padding-left: 30px;
+}
+
+    /* SOBRE */
+
+    /* CURSOS */
+
+#cursos-lista{
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.curso-icon{
+  text-align: center;
+  width: 25vw; 
+  padding: 0px;
+}
+
+.curso-icon p {
+  font-size: 15px;
+}
+
+.curso-icon h3 {
+  font-size: 19px;
+}
+    /* CURSOS */
+
+    /* BONUS */
+
+.secaoContato .flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90vw;
+  justify-content: space-evenly;
+}
+
+.secaoContato-informacoes {
+  width: 45vw;
+  font-size: 16px;
+  align-items: baseline;
+}
+
+.secaoContato form{
+  width: 43vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.secaoContato input:not([type="submit"]) {
+  width: 19vw;
+  margin-left: 15px;
+}
+.secaoContato h2 {
+  width: 100%;
+}
+
+.secaoContato textarea {
+  margin-left: 10px;
+  width: calc(38vw + 15px);
+}
+
+    /* BONUS */
+}
+
